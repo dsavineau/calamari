@@ -2,9 +2,8 @@ import traceback
 
 import gevent.event
 import zerorpc
-from salt.key import Key
-import salt.config
 
+from calamari_common.salt import Key, master_config
 from cthulhu.manager import config
 from cthulhu.log import log
 from calamari_common.types import OsdMap, SYNC_OBJECT_STR_TYPE, OSD, OSD_MAP, POOL, CLUSTER, CRUSH_RULE, ServiceId,\
@@ -296,7 +295,7 @@ class RpcInterface(object):
 
     @property
     def _salt_key(self):
-        return Key(salt.config.master_config(config.get('cthulhu', 'salt_config_path')))
+        return Key(master_config(config.get('cthulhu', 'salt_config_path')))
 
     def minion_status(self, status_filter):
         """
