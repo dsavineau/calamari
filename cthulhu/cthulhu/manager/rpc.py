@@ -1,7 +1,11 @@
 import traceback
 
 import gevent.event
-import zerorpc
+
+try:
+    import zerorpc
+except ImportError:
+    zerorpc = None
 
 from calamari_common.salt import Key, master_config
 from cthulhu.manager import config
@@ -414,6 +418,9 @@ class RpcThread(gevent.greenlet.Greenlet):
         super(RpcThread, self).__init__()
         self._manager = manager
         self._complete = gevent.event.Event()
+        if zerorpc is None:
+            log.error("zerorpc package is missing")
+            raise RuntimeError("Cannot run without zerorpc installed!")
         self._server = zerorpc.Server(RpcInterface(manager))
         self._bound = False
 
