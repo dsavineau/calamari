@@ -4,7 +4,7 @@ import importlib
 import os
 import time
 
-from calamari_common.salt import LocalClient
+from calamari_common.salt_wrapper import LocalClient
 from calamari_common.util import memoize
 from cthulhu.manager import config
 from cthulhu.log import log

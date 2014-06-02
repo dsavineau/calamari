@@ -1,5 +1,5 @@
 
-from calamari_common.salt import client_config
+from calamari_common.salt_wrapper import client_config
 from calamari_common.config import CalamariConfig
 
 # A config instance for use from within the manager service

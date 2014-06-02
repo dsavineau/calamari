@@ -1,6 +1,6 @@
 import uuid
 
-from calamari_common.salt import LocalClient
+from calamari_common.salt_wrapper import LocalClient
 from cthulhu.manager import config
 from cthulhu.log import log
 from calamari_common.types import OsdMap, PgSummary, USER_REQUEST_COMPLETE, USER_REQUEST_SUBMITTED

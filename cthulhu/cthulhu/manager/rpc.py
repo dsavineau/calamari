@@ -7,7 +7,7 @@ try:
 except ImportError:
     zerorpc = None
 
-from calamari_common.salt import Key, master_config
+from calamari_common.salt_wrapper import Key, master_config
 from cthulhu.manager import config
 from cthulhu.log import log
 from calamari_common.types import OsdMap, SYNC_OBJECT_STR_TYPE, OSD, OSD_MAP, POOL, CLUSTER, CRUSH_RULE, ServiceId,\

@@ -9,7 +9,7 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 from django.contrib.auth.decorators import login_required
 
-from calamari_common.salt import MasterPillarUtil, client_config, LocalClient
+from calamari_common.salt_wrapper import MasterPillarUtil, client_config, LocalClient
 from calamari_rest.serializers.v2 import PoolSerializer, CrushRuleSetSerializer, CrushRuleSerializer, \
     ServerSerializer, SimpleServerSerializer, SaltKeySerializer, RequestSerializer, \
     ClusterSerializer, EventSerializer, LogTailSerializer, OsdSerializer, ConfigSettingSerializer, MonSerializer, OsdConfigSerializer, \

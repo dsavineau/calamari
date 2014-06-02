@@ -6,7 +6,7 @@ from pytz import utc
 import gevent.greenlet
 import gevent.event
 
-from calamari_common.salt import condition_kwarg, LocalClient, SaltEventSource
+from calamari_common.salt_wrapper import condition_kwarg, LocalClient, SaltEventSource
 
 from cthulhu.gevent_util import nosleep, nosleep_mgr
 from cthulhu.log import log

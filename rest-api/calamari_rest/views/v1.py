@@ -18,7 +18,6 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.contrib.auth.models import User
 from rest_framework.views import APIView
 
-
 # Suppress warning from graphite's use of old django API
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning,

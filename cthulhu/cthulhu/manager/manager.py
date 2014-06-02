@@ -48,7 +48,7 @@ else:
     from cthulhu.persistence.servers import Server, Service
 
 
-from calamari_common.salt import SaltEventSource
+from calamari_common.salt_wrapper import SaltEventSource
 
 # Manhole module optional for debugging.
 try:

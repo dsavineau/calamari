@@ -19,7 +19,7 @@ from cthulhu.manager import salt_config, config
 # The type name for hosts and osds in the CRUSH map (if users have their
 # own crush map they may have changed this), Ceph defaults are 'host' and 'osd'
 from calamari_common.types import OsdMap, MonMap, ServiceId
-from calamari_common.salt import SaltEventSource, LocalClient, MasterPillarUtil
+from calamari_common.salt_wrapper import SaltEventSource, LocalClient, MasterPillarUtil
 from cthulhu.persistence.servers import Server, Service
 from cthulhu.util import now
 
