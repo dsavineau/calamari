@@ -24,6 +24,7 @@ try:
     from salt.config import master_config  # noqa
     from salt.utils.master import MasterPillarUtil  # noqa
     from salt.config import client_config  # noqa
+    from salt.loader import _create_loader
 except ImportError:
     condition_kwarg = None
     LocalClient = None
@@ -32,6 +33,7 @@ except ImportError:
     master_config = None
     MasterPillarUtil = None
     client_config = lambda x: None
+    _create_loader = None
 
 
 class SaltEventSource(object):

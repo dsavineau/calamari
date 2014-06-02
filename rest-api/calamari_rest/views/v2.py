@@ -9,6 +9,7 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 from django.contrib.auth.decorators import login_required
 
+from calamari_common.salt import MasterPillarUtil, client_config, LocalClient
 from calamari_rest.serializers.v2 import PoolSerializer, CrushRuleSetSerializer, CrushRuleSerializer, \
     ServerSerializer, SimpleServerSerializer, SaltKeySerializer, RequestSerializer, \
     ClusterSerializer, EventSerializer, LogTailSerializer, OsdSerializer, ConfigSettingSerializer, MonSerializer, OsdConfigSerializer, \
@@ -650,7 +651,6 @@ all record of it from any/all clusters).
         by cthulhu via Ceph) to network interfaces (known by salt from its
         grains).
         """
-
         server_to_grains = get_remote_grains([s['fqdn'] for s in servers])
 
         for server in servers:
